@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: lead-agent-api
+    env: docker
+    region: frankfurt # შეგიძლია შეცვალო შენთვის სასურველი ლოკაციით (მაგ: ohio, oregon და ა.შ.)
+    plan: free
+    branch: main
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11

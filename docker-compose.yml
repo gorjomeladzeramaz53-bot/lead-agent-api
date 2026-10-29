@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  lead-agent-api:
+    build: .
+    container_name: lead_agent_app
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=false
+      - DATABASE_URL=sqlite+aiosqlite:///./lead_agent.db
+      # Add other environment variables or link a .env file here
+    volumes:
+      - ./lead_agent.db:/app/lead_agent.db # Persist SQLite database outside container
+    networks:
+      - lead-agent-net
+
+networks:
+  lead-agent-net:
+    driver: bridge

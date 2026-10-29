@@ -1,0 +1,21 @@
+# --- Web framework ---
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic-settings>=2.5
+
+# --- Database ---
+sqlalchemy>=2.0
+alembic>=1.13
+psycopg2-binary>=2.9
+
+# --- AI providers ---
+google-genai>=1.0
+openai>=1.50
+
+# --- Scraping ---
+httpx>=0.27
+beautifulsoup4>=4.12
+lxml>=5.0
+
+# --- Resilience ---
+tenacity>=9.0
