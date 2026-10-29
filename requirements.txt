@@ -19,3 +19,4 @@ lxml>=5.0
 
 # --- Resilience ---
 tenacity>=9.0
+greenlet
